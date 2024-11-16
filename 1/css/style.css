@@ -1,0 +1,212 @@
+/* 基础样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* 头部导航栏样式 */
+header {
+    background-color: #004b87;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ffdd57;
+}
+
+/* 主内容区域 */
+.main-content {
+    position: relative;
+    width: 100%;
+}
+
+/* 轮播图容器 */
+#carouselExampleIndicators {
+    position: relative;
+    height: 100vh; /* 使轮播图占满整个屏幕高度 */
+}
+
+.carousel-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 确保图片铺满屏幕且不会被拉伸 */
+}
+
+/* 上方文字，浮动在轮播图上方 */
+.overlay-text {
+    position: absolute;
+    top: 10%; /* 向上移动文字，调整为10% */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.overlay-text h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.overlay-text p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* 左右按钮自定义样式 */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent; /* 按钮背景透明 */
+    border: none; /* 去掉默认的边框 */
+    z-index: 3;
+    font-size: 2em;
+    padding: 10px;
+}
+
+/* 使用三角形箭头 */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent; /* 设置图标背景透明 */
+    border: none;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    color: #ffdd57; /* 悬停时箭头颜色变为金色 */
+}
+
+/* 左右按钮位置调整 */
+.carousel-control-prev {
+    left: 10px; /* 左按钮更靠近左边 */
+}
+
+.carousel-control-next {
+    right: 10px; /* 右按钮更靠近右边 */
+}
+
+/* 要闻部分 */
+.news-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.news-title {
+    text-align: center;
+    color: #004b87; /* 与轮播图蓝色一致 */
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* 为要闻部分的容器添加样式 */
+.news-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* 设置图片之间的间距 */
+    flex-wrap: wrap; /* 允许换行，以适应小屏幕 */
+    padding: 0 20px; /* 给左右两边添加间距 */
+}
+
+/* 每个新闻项目 */
+.news-item {
+    width: 32%; /* 每个项目占 1/3 宽度 */
+    text-align: center; /* 使文字居中 */
+    margin-bottom: 20px;
+}
+
+.news-item img {
+    width: 100%;        /* 图片宽度适应容器 */
+    height: 200px;      /* 固定图片高度 */
+    object-fit: cover;  /* 保证图片按比例裁剪并填满容器 */
+    margin-bottom: 15px; /* 图片与文字之间的间距 */
+}
+
+.news-item h3 {
+    font-size: 1.5em;
+    color: #004b87; /* 与轮播图蓝色一致 */
+    margin-bottom: 10px; /* 文字与图片之间的间距 */
+}
+
+.news-item p {
+    font-size: 1em;
+    color: #666;
+}
+ /* 自定义样式 */
+ .news-section .col-md-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.news-section .news-item {
+    margin-bottom: 30px; /* 图片之间的间距 */
+}
+
+/* 设置图片大小并保持比例 */
+.news-section .news-item img {
+    width: 100%;
+    height: 250px; /* 增加图片高度，设置为固定高度 */
+    object-fit: cover; /* 保持图片比例，裁剪图片以适应容器 */
+    display: block;
+}
+
+/* 确保图片之间的间距一致 */
+.news-section .row {
+    margin-left: -15px;
+    margin-right: -15px; /* 确保左边和右边的图片与页面边缘的间距相同 */
+}
+
+/* 设置最左边和最右边图片的间距 */
+.news-section .row > .col-md-4:first-child {
+    padding-left: 0;
+}
+
+.news-section .row > .col-md-4:last-child {
+    padding-right: 0;
+}
+
+/* 设置图片底部间距 */
+.news-section .news-item h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 底部样式 */
+footer {
+    background-color: #004b87;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
