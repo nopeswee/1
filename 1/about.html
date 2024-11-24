@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大学校园官网 - 学校概况</title>
+    <link rel="icon" href="img/1.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: #004b87;
+        }
+
+        header {
+            background: #004b87;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed; /* 固定在页面顶部 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2; /* 确保位于幕布上方 */
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 1em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0.5)), 
+                        url('img/about/curtain.jpg') center/cover no-repeat;
+            z-index: 0; /* 确保在内容和页眉、页脚下方 */
+        }
+
+        .main-content {
+            position: relative;
+            z-index: 1;
+            padding: 100px 20px 50px; /* 调整顶部留白以适应固定的导航栏 */
+        }
+
+        .main-content h1 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .section h2 {
+            color: #004b87;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            color: #333;
+            line-height: 1.6;
+            font-size: 1.2em;
+            margin-right: 20px;
+        }
+
+        .section img {
+            max-width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #004b87;
+            color: #fff;
+            margin-top: 50px;
+            position: relative; /* 默认流定位，确保在幕布上方 */
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- 半透明幕布 -->
+    <div class="overlay"></div>
+
+    <!-- 导航栏 -->
+    <header>
+        <div class="logo">校园官网</div>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="about.html">学校概况</a>
+            <a href="campus-life.html">校园生活</a>
+            <a href="admissions.html">招生信息</a>
+            <a href="contact.html">联系我们</a>
+        </nav>
+    </header>
+
+    <!-- 学校概况 -->
+    <section class="main-content">
+        <h1>学校概况</h1>
+
+        <!-- 板块 1 -->
+        <div class="section">
+            <div>
+                <h2>悠久历史</h2>
+                <p>我们学校创建于1924年，至今已有百年历史。早期仅有数个学科，如今已发展为综合性大学，涵盖理、工、文、医、艺术等多个领域。学校秉承“明德博学，笃行致远”的校训，培养了数以万计的优秀校友，为社会做出了巨大贡献。</p>
+            </div>
+            <img src="img/about/history.jpg" alt="悠久历史">
+        </div>
+
+        <!-- 板块 2 -->
+        <div class="section">
+            <div>
+                <h2>多元化教育</h2>
+                <p>学校致力于提供多元化教育，拥有60多个本科专业、40多个硕士点以及20多个博士点。课程设计注重理论与实践结合，通过学术研究、社会实践及国际交流，帮助学生全面提升知识储备和实践能力。</p>
+            </div>
+            <img src="img/about/education.jpg" alt="多元化教育">
+        </div>
+
+        <!-- 板块 3 -->
+        <div class="section">
+            <div>
+                <h2>世界一流设施</h2>
+                <p>学校配备了世界一流的教学和科研设施，包括智能化图书馆、高性能计算机中心、国际标准实验室等。美丽的校园环境为学生提供了良好的学习氛围，校内体育馆、剧场和多功能活动中心也成为学生课余生活的重要组成部分。</p>
+            </div>
+            <img src="img/about/facilities.jpg" alt="世界一流设施">
+        </div>
+
+        <!-- 板块 4 -->
+        <div class="section">
+            <div>
+                <h2>国际化合作</h2>
+                <p>学校积极推进国际化战略，与全球100多所知名大学和科研机构建立合作伙伴关系，提供交换项目、联合研究及海外实习机会。每年有超过500名学生参与海外交流，为他们未来的职业发展和全球化视野打下坚实基础。</p>
+            </div>
+            <img src="img/about/international.jpg" alt="国际化合作">
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2024 大学校园官网. 保留所有权利.</p>
+    </footer>
+</body>
+</html>
