@@ -14,17 +14,16 @@
         }
 
         header {
-            background: #004b87;
-            color: #fff;
-            padding: 15px 20px;
+            background-color: #004b87;
+            color: white;
+            padding: 13px 20px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            position: fixed;
+            align-items: center;
+            position: sticky;
             top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 2;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
@@ -35,7 +34,7 @@
         nav a {
             color: #fff;
             text-decoration: none;
-            margin-left: 20px;
+            margin-left: 15px;
             font-size: 1em;
         }
 
@@ -57,7 +56,7 @@
         .main-content {
             position: relative;
             z-index: 1;
-            padding: 100px 20px 50px;
+            padding: 40px 20px 50px;
         }
 
         .main-content h1 {
