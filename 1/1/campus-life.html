@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>墨林大学官网 - 校园生活</title>
+    <link rel="icon" href="img/1.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 主要样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 保持 header 和 footer 不变 */
+        header {
+            background-color: #004b87;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #004b87;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* 容器和背景图片 */
+        .main-container {
+            position: relative;
+            background-image: url('img/campus-life-bg.jpg'); /* 背景图片 */
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh; /* 确保内容区域的高度 */
+        }
+
+        /* 半透明的灰色幕布 */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* 半透明的灰色 */
+        }
+
+        /* 内容布局 */
+        .content-container {
+            position: relative;
+            z-index: 1;
+            padding: 50px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .block {
+            background-color: rgba(255, 255, 255, 0.7); /* 白色背景，并带透明 */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 长方形板块 */
+        .long-blocks {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .long-block {
+            height: auto; /* 高度自动，以适应内容 */
+            width: 100%;
+        }
+
+        /* 小方形板块 (底部一排) */
+        .small-blocks {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .small-block {
+            flex: 1;
+            max-width: calc(50% - 10px); /* 设置最大宽度 */
+            height: 20;
+            padding-top: 100%; /* 使用 padding-top 来确保宽高比为 1:1，形成正方形 */
+            position: relative;
+        }
+
+        .small-block h2,
+        .small-block p {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #333;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="logo">墨林大学</div>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="about.html">学校概况</a>
+            <a href="campus-life.html">校园生活</a>
+            <a href="admissions.html">招生信息</a>
+            <a href="contact.html">联系我们</a>
+        </nav>
+    </header>
+
+    <!-- 主内容容器 -->
+    <section class="main-container">
+        <!-- 半透明的灰色幕布 -->
+        <div class="overlay"></div>
+
+        <!-- 内容区域 -->
+        <div class="content-container">
+            <!-- 长方形板块 (3个竖直排列) -->
+            <div class="long-blocks">
+                <div class="block long-block">
+                    <h2>校园活动</h2>
+                    <p>校园活动是学生生活的重要组成部分，每年学校组织各种活动，包括文化节、体育赛事、社团招新等。无论你是体育爱好者、文化艺术迷还是热衷于社交的学生，都能在这里找到适合自己的活动。</p>
+                    <ul>
+                        <li><strong>社团招新：</strong>每学期初，各类学生社团会举行招新活动，是同学们加入自己感兴趣的社团，扩展社交圈的好时机。</li>
+                        <li><strong>体育赛事：</strong>每年组织篮球赛、足球赛、田径赛等大型体育赛事，鼓励学生积极参与，锻炼身体。</li>
+                        <li><strong>文化节：</strong>文化节是展现学校多元文化的舞台，吸引学生参与各种文化表演和展示活动。</li>
+                    </ul>
+                </div>
+
+                <div class="block long-block">
+                    <h2>校园设施</h2>
+                    <p>学校拥有先进的设施，包括图书馆、体育馆、各类食堂以及多功能的学习和娱乐空间，确保学生在学术、娱乐、运动等方面的需求都能得到满足。</p>
+                    <ul>
+                        <li><strong>图书馆：</strong>配备丰富的书籍和电子资源，是同学们学习和自我提升的理想场所。</li>
+                        <li><strong>体育馆：</strong>设施完备，提供室内篮球场、羽毛球场、乒乓球室等，适合各种体育活动。</li>
+                        <li><strong>学生餐厅：</strong>校园内有多个餐厅，提供多种餐饮选择，满足不同口味和饮食需求。</li>
+                    </ul>
+                </div>
+
+                <div class="block long-block">
+                    <h2>学生支持</h2>
+                    <p>学校为学生提供全方位的支持服务，帮助学生在学业、心理和职业等方面得到专业的帮助，确保他们在大学期间能够顺利成长与发展。</p>
+                    <ul>
+                        <li><strong>心理辅导：</strong>学校提供专业的心理咨询服务，帮助学生应对学业和生活中的压力。</li>
+                        <li><strong>职业发展中心：</strong>提供职业规划、实习机会、简历指导和面试培训，帮助学生为进入职场做好准备。</li>
+                        <li><strong>国际学生服务：</strong>为国际学生提供全面支持，包括签证办理、住宿安排、文化适应等。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 小方形板块 (2个一排) -->
+            <div class="small-blocks">
+                <div class="block small-block">
+                    <h2>校园文化</h2>
+                    <p>学校注重校园文化的多样性和创新性，定期举办各类文化活动和讲座，为学生提供展示自我、丰富生活的机会。</p>
+                    <ul>
+                        <li><strong>文化讲座：</strong>邀请各领域专家学者举办讲座，分享专业知识和人生经验。</li>
+                        <li><strong>艺术展览：</strong>校园内定期举办艺术展览，展示学生和外部艺术家的创作成果。</li>
+                        <li><strong>电影放映：</strong>定期组织电影放映活动，播放经典影片和新片，为学生提供轻松的课外活动。</li>
+                    </ul>
+                </div>
+
+                <div class="block small-block">
+                    <h2>学生宿舍</h2>
+                    <p>学校为学生提供现代化的宿舍设施，确保住宿环境舒适、安全，给学生一个温馨的“家”。</p>
+                    <ul>
+                        <li><strong>单人间：</strong>单人宿舍配备个人床位、书桌和衣柜，适合需要独立空间的学生。</li>
+                        <li><strong>双人间：</strong>双人宿舍为学生提供舒适的共享生活环境，适合朋友或新同学一起入住。</li>
+                        <li><strong>多人间：</strong>多人间为预算有限的学生提供更多选择，宿舍内配有公共空间和必要设施。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer>
+        <p>&copy; 2024 墨林大学官网. 保留所有权利.</p>
+    </footer>
+</body>
+
+</html>

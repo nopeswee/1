@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>墨林大学官网 - 招生信息</title>
+    <link rel="icon" href="img/1.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 通用字体和背景设置 */
+        body {
+            font-family: '微软雅黑', Arial, sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* 固定导航栏样式 */
+        header {
+            background-color: #004b87;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* 图片区域 */
+        .top-image img {
+            width: 100%;
+            height: 55vh;
+            object-fit: cover;
+        }
+
+        /* 招生信息内容 */
+        .main-content {
+            padding: 30px;
+            max-width: 90%;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .main-content h1 {
+            font-size: 2rem;
+            color: #004b87;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .main-content p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .main-content h2 {
+            font-size: 1.5rem;
+            color: #004b87;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        /* 底部样式 */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #004b87;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* 动态显示类 */
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="logo">墨林大学</div>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="about.html">学校概况</a>
+            <a href="campus-life.html">校园生活</a>
+            <a href="admissions.html">招生信息</a>
+            <a href="contact.html">联系我们</a>
+        </nav>
+    </header>
+
+    <!-- 图片区域 -->
+    <div class="top-image">
+        <img src="img/img1.jpg" alt="校园图片">
+    </div>
+
+    <!-- 招生信息内容 -->
+    <section class="main-content">
+        <h1>招生信息</h1>
+        <h2>详细概述</h2>
+        <p>了解我们学校的招生政策、报名流程以及在线咨询信息。</p>
+
+        <h2>招生政策</h2>
+        <p>我们的招生政策旨在为优秀的学子提供广阔的发展平台，欢迎报考各类专业。</p>
+
+        <h2>报名流程</h2>
+        <p>请在规定时间内完成网上报名，并提交相关材料。详细的报名流程请查看招生简章。</p>
+
+        <h2>在线咨询</h2>
+        <p>如有任何问题，请通过我们的在线咨询平台与招生办取得联系。</p>
+        <p>咨询电话：13888888888</p>
+    </section>
+
+    <!-- 底部 -->
+    <footer>
+        <p>&copy; 2024 墨林大学官网. 保留所有权利.</p>
+    </footer>
+
+    <script>
+        // 使用 IntersectionObserver 监听滚动到的元素
+        const observerOptions = {
+            root: null, // 视口为根元素
+            threshold: 0.35 // 元素至少一半进入视口时触发
+        };
+
+        const mainContent = document.querySelector('.main-content');
+
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible'); // 元素进入视口时添加可见效果
+                    observer.unobserve(entry.target); // 观察到后就停止监听
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        observer.observe(mainContent); // 开始监听
+    </script>
+</body>
+</html>
