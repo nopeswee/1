@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>墨林大学官网 - 校园生活</title>
+    <link rel="icon" href="img/1.png" type="image/png">
+    <link rel="stylesheet" href="css/campus-life.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #004b87;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #004b87;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .main-container {
+            position: relative;
+            min-height: 100vh;
+            background-image: url('img/campus-life/1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .content-container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding: 50px;
+            gap: 20px;
+        }
+
+        .long-blocks {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .block {
+            position: relative;
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        /* 调整上方板块样式 */
+        .long-block {
+            height: 300px;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .block h2,
+        .block p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 15px;
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .block:hover h2,
+        .block:hover p {
+            opacity: 1;
+        }
+
+        /* 调整下方板块样式 */
+        .small-blocks {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* 使下方板块变为正方形 */
+        .small-block {
+            width: 45%; /* 设置宽度为父容器的45% */
+            height: 0;
+            padding-bottom: 45%; /* 使用padding-bottom来创建正方形 */
+            position: relative;
+        }
+
+        .block {
+            position: relative;
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            cursor: pointer;
+
+            /* 初始状态：移到下方且不可见 */
+            transform: translateY(100px);
+            opacity: 0;
+            transition: transform 0.8s ease, opacity 0.8s ease;
+        }
+
+        /* 滑入视口时的样式 */
+        .block.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .long-block:nth-child(1) {
+            background-image: url('img/campus-life/campus-life1.jpg');
+        }
+
+        .long-block:nth-child(2) {
+            background-image: url('img/campus-life/campus-life2.jpg');
+        }
+
+        .long-block:nth-child(3) {
+            background-image: url('img/campus-life/campus-life3.jpg');
+        }
+
+        .small-block:nth-child(1) {
+            background-image: url('img/campus-life/campus-life4.jpg');
+        }
+
+        .small-block:nth-child(2) {
+            background-image: url('img/campus-life/campus-life5.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">墨林大学</div>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="about.html">学校概况</a>
+            <a href="campus-life.html">校园生活</a>
+            <a href="admissions.html">招生信息</a>
+            <a href="contact.html">联系我们</a>
+        </nav>
+    </header>
+
+    <section class="main-container">
+        <div class="overlay"></div>
+        <div class="content-container">
+            <div class="long-blocks">
+                <div class="block long-block">
+                    <p>丰富的校园活动内容，让学生们的课余生活更加多彩。无论是文化节、运动会还是学术论坛，我们提供广泛的活动选项，让每个学生都能找到属于自己的舞台。通过参与这些活动，学生们不仅能够发展兴趣爱好，还能提升团队协作能力与领导力。每年举办的文化节包括艺术表演、舞蹈比赛及戏剧演出，而运动会则吸引了众多体育爱好者参与。</p>
+                </div>
+                <div class="block long-block">
+                    <p>墨林大学致力于为学生提供先进的校园设施，包括现代化的教学楼、宽敞的体育馆、舒适的学习空间等。我们的图书馆和实验室是学习和科研的理想场所。图书馆内不仅收藏着大量的书籍、期刊和学术资料，还有多个安静的学习区域，为学生提供理想的自习环境。此外，学校还投资建设了多个智能实验室，为学科间的跨学科研究和实践项目提供了无限可能。</p>
+                </div>
+                <div class="block long-block">
+                    <p>学校提供全方位的学生支持服务，包括学业辅导、心理健康服务、职业规划和就业指导。我们关注每一位学生的成长与发展。无论是面对学业挑战还是个人困扰，学生都能获得及时的帮助和支持。学校还定期举办职业规划讲座、招聘会以及校友交流活动，帮助学生提前做好职业规划并成功迈入职场。</p>
+                </div>
+            </div>
+    
+            <div class="small-blocks">
+                <div class="block small-block">
+                    <p>墨林大学拥有丰富的校园文化，鼓励学生参与多种文化活动。无论是艺术展览、音乐会，还是文化讲座，都可以让你更好地了解校园的多元氛围。学校的艺术社团定期举办创意工作坊，鼓励学生发挥想象力创作个人艺术作品。与此同时，校园内的多元文化节吸引了各国学生展示自己国家的传统艺术与习俗。</p>
+                </div>
+                <div class="block small-block">
+                    <p>我们的学生宿舍为学生提供了舒适、安全的居住环境，配有现代化的设施和齐全的生活配套服务。宿舍内的社区活动也有助于同学们结识新朋友。宿舍配备24小时安保、智能门禁系统，并提供清洁和维修服务。此外，宿舍内还设有公共休息区和厨房，供学生在课外时光进行社交与放松。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <footer>
+        <p>&copy; 2024 墨林大学官网. 保留所有权利.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const blocks = document.querySelectorAll('.block');
+    
+            const onScroll = () => {
+                blocks.forEach((block) => {
+                    const rect = block.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight * 0.9) {
+                        block.classList.add('visible');
+                    }
+                });
+            };
+    
+            // 初始化和监听滚动
+            window.addEventListener('scroll', onScroll);
+            onScroll(); // 触发一次，处理已在视口内的内容
+        });
+    </script>
+    
+</body>
+
+</html>
